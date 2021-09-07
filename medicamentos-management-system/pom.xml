@@ -31,10 +31,13 @@
       <version>1.38.0</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.26</version>
     </dependency>
+
 
     <dependency>
       <groupId>org.hibernate</groupId>
@@ -83,6 +86,14 @@
             </goals>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>7</source>
+          <target>7</target>
+        </configuration>
       </plugin>
     </plugins>
 

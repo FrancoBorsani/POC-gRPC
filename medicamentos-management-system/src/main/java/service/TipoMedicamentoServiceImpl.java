@@ -4,10 +4,12 @@ import client.ResultClient;
 //import com.medicamentos_management.stubs.medicamento.*;
 
 //import com.medicamentos_management.stubs.medicamento.*;
+import com.google.protobuf.Empty;
 import com.medicamentos_management.stubs.tipoMedicamento.TipoMedicamentoServiceGrpc;
 import com.medicamentos_management.stubs.tipoMedicamento.TipoMedicamentoRequest;
 import com.medicamentos_management.stubs.tipoMedicamento.TipoMedicamentoResponse;
 
+import com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest;
 
 import domain.TipoMedicamento;
 import dao.TipoMedicamentoDao;
@@ -36,7 +38,7 @@ public class TipoMedicamentoServiceImpl extends TipoMedicamentoServiceGrpc.TipoM
         String nombre = request.getNombre();
 
         try{
-            TipoMedicamento tipoMedicamento = tipoMedicamentoDao.guardarTipo(id, nombre); // Let's find the student information from the student table
+            TipoMedicamento tipoMedicamento = tipoMedicamentoDao.guardarTipo(id, nombre, true); // Let's find the student information from the student table
 
             TipoMedicamentoResponse tipoMedicamentoResponse = TipoMedicamentoResponse.newBuilder()
                     .setId(id)
@@ -56,5 +58,46 @@ public class TipoMedicamentoServiceImpl extends TipoMedicamentoServiceGrpc.TipoM
             responseObserver.onError(Status.NOT_FOUND.asRuntimeException());
         }
     }
+
+
+
+
+
+    @Override
+    public void bajaTipoMedicamento(IdBajaRequest request, StreamObserver<IdBajaRequest> responseObserver) {
+        int id = request.getId();
+
+        try{
+            int baja = tipoMedicamentoDao.bajaTipo(id); // Let's find the student information from the student table
+
+            /*
+                gRPC works in an asynchronous manner, so if you have ever worked with asynchronous programming
+                you would know what will happen with following two methods.
+                with the onNext method we send the response, once the response is sent we use onCompleted()
+            */
+
+            IdBajaRequest idBaja = IdBajaRequest.newBuilder()
+                    .setId(1)
+                    .build();
+
+
+            responseObserver.onNext(idBaja);
+            responseObserver.onCompleted();
+        }catch (NoSuchElementException e){
+            logger.log(Level.SEVERE, "NO MEDICAMENTO FOUND WITH THE MEDICAMENTO ID :- ");
+
+            // If some error occurs we sent an error with the following status which is not_found
+            responseObserver.onError(Status.NOT_FOUND.asRuntimeException());
+        }
+    }
+
+
+
+
+
+
+
+
+
 
 }

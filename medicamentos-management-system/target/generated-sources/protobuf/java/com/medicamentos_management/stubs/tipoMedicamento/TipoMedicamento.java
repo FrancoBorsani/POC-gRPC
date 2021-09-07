@@ -15,6 +15,11 @@ public final class TipoMedicamento {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_medicamentos_management_stubs_tipoMedicamento_IdBajaRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_medicamentos_management_stubs_tipoMedicamento_IdBajaRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_medicamentos_management_stubs_tipoMedicamento_TipoMedicamentoRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -37,21 +42,24 @@ public final class TipoMedicamento {
       "s_management.stubs.tipoMedicamento\032\033goog" +
       "le/protobuf/empty.proto\032\036google/protobuf" +
       "/wrappers.proto\032\031google/protobuf/any.pro" +
-      "to\"4\n\026TipoMedicamentoRequest\022\n\n\002id\030\001 \001(\005" +
-      "\022\016\n\006nombre\030\002 \001(\t\"5\n\027TipoMedicamentoRespo" +
-      "nse\022\n\n\002id\030\001 \001(\005\022\016\n\006nombre\030\002 \001(\t2\311\003\n\026Tipo" +
-      "MedicamentoService\022\256\001\n\023altaTipoMedicamen" +
-      "to\022I.com.medicamentos_management.stubs.t" +
-      "ipoMedicamento.TipoMedicamentoRequest\032J." +
-      "com.medicamentos_management.stubs.tipoMe" +
-      "dicamento.TipoMedicamentoResponse\"\000\022L\n\023b" +
-      "ajaTipoMedicamento\022\033.google.protobuf.Int" +
-      "32Value\032\026.google.protobuf.Empty\"\000\022\257\001\n\026ge" +
-      "tTipoMedicamentoInfo\022I.com.medicamentos_" +
-      "management.stubs.tipoMedicamento.TipoMed" +
-      "icamentoRequest\032J.com.medicamentos_manag" +
-      "ement.stubs.tipoMedicamento.TipoMedicame" +
-      "ntoResponseB\002P\001b\006proto3"
+      "to\"\033\n\rIdBajaRequest\022\n\n\002id\030\001 \001(\005\"4\n\026TipoM" +
+      "edicamentoRequest\022\n\n\002id\030\001 \001(\005\022\016\n\006nombre\030" +
+      "\002 \001(\t\"5\n\027TipoMedicamentoResponse\022\n\n\002id\030\001" +
+      " \001(\005\022\016\n\006nombre\030\002 \001(\t2\231\004\n\026TipoMedicamento" +
+      "Service\022\256\001\n\023altaTipoMedicamento\022I.com.me" +
+      "dicamentos_management.stubs.tipoMedicame" +
+      "nto.TipoMedicamentoRequest\032J.com.medicam" +
+      "entos_management.stubs.tipoMedicamento.T" +
+      "ipoMedicamentoResponse\"\000\022\233\001\n\023bajaTipoMed" +
+      "icamento\022@.com.medicamentos_management.s" +
+      "tubs.tipoMedicamento.IdBajaRequest\032@.com" +
+      ".medicamentos_management.stubs.tipoMedic" +
+      "amento.IdBajaRequest\"\000\022\257\001\n\026getTipoMedica" +
+      "mentoInfo\022I.com.medicamentos_management." +
+      "stubs.tipoMedicamento.TipoMedicamentoReq" +
+      "uest\032J.com.medicamentos_management.stubs" +
+      ".tipoMedicamento.TipoMedicamentoResponse" +
+      "B\002P\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -60,14 +68,20 @@ public final class TipoMedicamento {
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.protobuf.AnyProto.getDescriptor(),
         });
-    internal_static_com_medicamentos_management_stubs_tipoMedicamento_TipoMedicamentoRequest_descriptor =
+    internal_static_com_medicamentos_management_stubs_tipoMedicamento_IdBajaRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_com_medicamentos_management_stubs_tipoMedicamento_IdBajaRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_medicamentos_management_stubs_tipoMedicamento_IdBajaRequest_descriptor,
+        new java.lang.String[] { "Id", });
+    internal_static_com_medicamentos_management_stubs_tipoMedicamento_TipoMedicamentoRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_com_medicamentos_management_stubs_tipoMedicamento_TipoMedicamentoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_medicamentos_management_stubs_tipoMedicamento_TipoMedicamentoRequest_descriptor,
         new java.lang.String[] { "Id", "Nombre", });
     internal_static_com_medicamentos_management_stubs_tipoMedicamento_TipoMedicamentoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_com_medicamentos_management_stubs_tipoMedicamento_TipoMedicamentoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_medicamentos_management_stubs_tipoMedicamento_TipoMedicamentoResponse_descriptor,

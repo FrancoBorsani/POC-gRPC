@@ -19,5 +19,6 @@ public class TipoMedicamento {
     @Id
     private int id;
     private String nombre;
+    private boolean activo;
 
 }

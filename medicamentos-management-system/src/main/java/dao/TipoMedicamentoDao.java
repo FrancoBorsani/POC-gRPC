@@ -31,7 +31,7 @@ public class TipoMedicamentoDao {
         return tipoMedicamento;
     }
 
-    public TipoMedicamento guardarTipo(int id, String nombre){
+    public TipoMedicamento guardarTipo(int id, String nombre, boolean activo){
 
         // We use entity managers to manage our two entities.
         // We use the factory design pattern to get the entity manager.
@@ -40,7 +40,7 @@ public class TipoMedicamentoDao {
         EntityManager em = emf.createEntityManager();
 
 
-        TipoMedicamento tipo = new TipoMedicamento(id, nombre);
+        TipoMedicamento tipo = new TipoMedicamento(id, nombre, activo);
 
         try {
             em.getTransaction().begin();
@@ -60,6 +60,33 @@ public class TipoMedicamentoDao {
 
 
 
+    public int bajaTipo(int id){
+
+        // We use entity managers to manage our two entities.
+        // We use the factory design pattern to get the entity manager.
+        // Here we should provide the name of the persistence unit that we provided in the persistence.xml file.
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("medicamentos-management-system");
+        EntityManager em = emf.createEntityManager();
+
+
+        TipoMedicamento tipo = this.findById(id);
+        tipo.setActivo(false);
+
+        try {
+            em.getTransaction().begin();
+            em.merge(tipo);
+            em.getTransaction().commit();
+        } catch (Exception e) {
+
+            e.printStackTrace();
+        }finally {
+            em.close();
+        }
+
+
+        // If everything worked fine, return the result.
+        return 1;
+    }
 
 
 }

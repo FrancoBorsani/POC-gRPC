@@ -20,9 +20,15 @@ import "google/protobuf/any.proto";
 
 service TipoMedicamentoService{
   rpc altaTipoMedicamento (TipoMedicamentoRequest) returns (TipoMedicamentoResponse) {};
-  rpc bajaTipoMedicamento (google.protobuf.Int32Value) returns (google.protobuf.Empty) {};
+  rpc bajaTipoMedicamento (IdBajaRequest) returns (IdBajaRequest) {};
   rpc getTipoMedicamentoInfo(TipoMedicamentoRequest) returns (TipoMedicamentoResponse);
 }
+
+
+message IdBajaRequest{
+  int32 id = 1;
+}
+
 
 
 message TipoMedicamentoRequest{

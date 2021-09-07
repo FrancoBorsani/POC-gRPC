@@ -14,6 +14,7 @@ C:\Users\MeDicenTecno\Desktop\x\medicamentos-management-system\target\generated-
 C:\Users\MeDicenTecno\Desktop\x\medicamentos-management-system\target\generated-sources\protobuf\java\com\medicamentos_management\stubs\tipoMedicamento\TipoMedicamentoRequest.java
 C:\Users\MeDicenTecno\Desktop\x\medicamentos-management-system\src\main\java\server\MedicamentoServer.java
 C:\Users\MeDicenTecno\Desktop\x\medicamentos-management-system\target\generated-sources\protobuf\java\com\medicamentos_management\stubs\medicamento\MedicamentoRequest.java
+C:\Users\MeDicenTecno\Desktop\x\medicamentos-management-system\target\generated-sources\protobuf\java\com\medicamentos_management\stubs\tipoMedicamento\IdBajaRequestOrBuilder.java
 C:\Users\MeDicenTecno\Desktop\x\medicamentos-management-system\src\main\java\service\MedicamentoServiceImpl.java
 C:\Users\MeDicenTecno\Desktop\x\medicamentos-management-system\src\main\java\cliente\ResultClient.java
 C:\Users\MeDicenTecno\Desktop\x\medicamentos-management-system\src\main\java\service\ResultServiceImpl.java
@@ -27,6 +28,7 @@ C:\Users\MeDicenTecno\Desktop\x\medicamentos-management-system\target\generated-
 C:\Users\MeDicenTecno\Desktop\x\medicamentos-management-system\src\main\java\dao\MedicamentoDao.java
 C:\Users\MeDicenTecno\Desktop\x\medicamentos-management-system\src\main\java\dao\TipoMedicamentoDao.java
 C:\Users\MeDicenTecno\Desktop\x\medicamentos-management-system\target\generated-sources\protobuf\java\com\medicamentos_management\stubs\medicamento\MedicamentoRequestOrBuilder.java
+C:\Users\MeDicenTecno\Desktop\x\medicamentos-management-system\target\generated-sources\protobuf\java\com\medicamentos_management\stubs\tipoMedicamento\IdBajaRequest.java
 C:\Users\MeDicenTecno\Desktop\x\medicamentos-management-system\target\generated-sources\protobuf\grpc-java\com\medicamentos_management\stubs\result\ResultServiceGrpc.java
 C:\Users\MeDicenTecno\Desktop\x\medicamentos-management-system\src\main\java\domain\Result.java
 C:\Users\MeDicenTecno\Desktop\x\medicamentos-management-system\target\generated-sources\protobuf\grpc-java\com\medicamentos_management\stubs\medicamento\MedicamentoServiceGrpc.java

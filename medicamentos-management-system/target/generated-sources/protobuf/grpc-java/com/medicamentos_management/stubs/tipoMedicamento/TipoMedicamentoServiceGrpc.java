@@ -45,29 +45,29 @@ public final class TipoMedicamentoServiceGrpc {
     return getAltaTipoMedicamentoMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Int32Value,
-      com.google.protobuf.Empty> getBajaTipoMedicamentoMethod;
+  private static volatile io.grpc.MethodDescriptor<com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest,
+      com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest> getBajaTipoMedicamentoMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "bajaTipoMedicamento",
-      requestType = com.google.protobuf.Int32Value.class,
-      responseType = com.google.protobuf.Empty.class,
+      requestType = com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest.class,
+      responseType = com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.google.protobuf.Int32Value,
-      com.google.protobuf.Empty> getBajaTipoMedicamentoMethod() {
-    io.grpc.MethodDescriptor<com.google.protobuf.Int32Value, com.google.protobuf.Empty> getBajaTipoMedicamentoMethod;
+  public static io.grpc.MethodDescriptor<com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest,
+      com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest> getBajaTipoMedicamentoMethod() {
+    io.grpc.MethodDescriptor<com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest, com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest> getBajaTipoMedicamentoMethod;
     if ((getBajaTipoMedicamentoMethod = TipoMedicamentoServiceGrpc.getBajaTipoMedicamentoMethod) == null) {
       synchronized (TipoMedicamentoServiceGrpc.class) {
         if ((getBajaTipoMedicamentoMethod = TipoMedicamentoServiceGrpc.getBajaTipoMedicamentoMethod) == null) {
           TipoMedicamentoServiceGrpc.getBajaTipoMedicamentoMethod = getBajaTipoMedicamentoMethod =
-              io.grpc.MethodDescriptor.<com.google.protobuf.Int32Value, com.google.protobuf.Empty>newBuilder()
+              io.grpc.MethodDescriptor.<com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest, com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "bajaTipoMedicamento"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.google.protobuf.Int32Value.getDefaultInstance()))
+                  com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.google.protobuf.Empty.getDefaultInstance()))
+                  com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest.getDefaultInstance()))
               .setSchemaDescriptor(new TipoMedicamentoServiceMethodDescriptorSupplier("bajaTipoMedicamento"))
               .build();
         }
@@ -164,8 +164,8 @@ public final class TipoMedicamentoServiceGrpc {
 
     /**
      */
-    public void bajaTipoMedicamento(com.google.protobuf.Int32Value request,
-        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+    public void bajaTipoMedicamento(com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest request,
+        io.grpc.stub.StreamObserver<com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBajaTipoMedicamentoMethod(), responseObserver);
     }
 
@@ -189,8 +189,8 @@ public final class TipoMedicamentoServiceGrpc {
             getBajaTipoMedicamentoMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                com.google.protobuf.Int32Value,
-                com.google.protobuf.Empty>(
+                com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest,
+                com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest>(
                   this, METHODID_BAJA_TIPO_MEDICAMENTO)))
           .addMethod(
             getGetTipoMedicamentoInfoMethod(),
@@ -227,8 +227,8 @@ public final class TipoMedicamentoServiceGrpc {
 
     /**
      */
-    public void bajaTipoMedicamento(com.google.protobuf.Int32Value request,
-        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+    public void bajaTipoMedicamento(com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest request,
+        io.grpc.stub.StreamObserver<com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBajaTipoMedicamentoMethod(), getCallOptions()), request, responseObserver);
     }
@@ -265,7 +265,7 @@ public final class TipoMedicamentoServiceGrpc {
 
     /**
      */
-    public com.google.protobuf.Empty bajaTipoMedicamento(com.google.protobuf.Int32Value request) {
+    public com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest bajaTipoMedicamento(com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBajaTipoMedicamentoMethod(), getCallOptions(), request);
     }
@@ -302,8 +302,8 @@ public final class TipoMedicamentoServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> bajaTipoMedicamento(
-        com.google.protobuf.Int32Value request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest> bajaTipoMedicamento(
+        com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getBajaTipoMedicamentoMethod(), getCallOptions()), request);
     }
@@ -343,8 +343,8 @@ public final class TipoMedicamentoServiceGrpc {
               (io.grpc.stub.StreamObserver<com.medicamentos_management.stubs.tipoMedicamento.TipoMedicamentoResponse>) responseObserver);
           break;
         case METHODID_BAJA_TIPO_MEDICAMENTO:
-          serviceImpl.bajaTipoMedicamento((com.google.protobuf.Int32Value) request,
-              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          serviceImpl.bajaTipoMedicamento((com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest) request,
+              (io.grpc.stub.StreamObserver<com.medicamentos_management.stubs.tipoMedicamento.IdBajaRequest>) responseObserver);
           break;
         case METHODID_GET_TIPO_MEDICAMENTO_INFO:
           serviceImpl.getTipoMedicamentoInfo((com.medicamentos_management.stubs.tipoMedicamento.TipoMedicamentoRequest) request,

@@ -18,7 +18,7 @@ import "google/protobuf/wrappers.proto";
 import "google/protobuf/any.proto";
 
 service MedicamentoService {
-  rpc altaMedicamento (Medicamento) returns (Medicamento) {};
+  rpc altaMedicamento (MedicamentoAltaRequest) returns (MedicamentoAltaResponse) {};
   rpc listarMedicamentosAerosol (Pagination) returns (MedicamentoList) {};
   rpc listarMedicamentosNombreComercialA (Pagination) returns (MedicamentoList) {};
   rpc getMedicamentoInfo(MedicamentoRequest) returns (MedicamentoResponse);
@@ -41,12 +41,22 @@ message Medicamento{
   string codigo = 2;
   string nombreComercial = 3;
   string nombreDroga = 4;
-  TipoMedicamento tipo = 5;
+  string tipo = 5;
 }
+
 
 
 message MedicamentoRequest{
   int32 id = 1;
+}
+
+
+message MedicamentoAltaRequest{
+  int32 id = 1;
+  string codigo = 2;
+  string nombreComercial = 3;
+  string nombreDroga = 4;
+  string tipo = 5;
 }
 
 
@@ -55,7 +65,17 @@ message MedicamentoResponse{
   string codigo = 2;
   string nombreComercial = 3;
   string nombreDroga = 4;
-  TipoMedicamento tipo = 5;
+  string tipo = 5;
+}
+
+
+
+message MedicamentoAltaResponse{
+  int32 id = 1;
+  string codigo = 2;
+  string nombreComercial = 3;
+  string nombreDroga = 4;
+  string tipo = 5;
 }
 
 

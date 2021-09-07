@@ -50,17 +50,14 @@ public interface MedicamentoOrBuilder extends
       getNombreDrogaBytes();
 
   /**
-   * <code>.com.medicamentos_management.stubs.medicamento.TipoMedicamento tipo = 5;</code>
-   * @return Whether the tipo field is set.
-   */
-  boolean hasTipo();
-  /**
-   * <code>.com.medicamentos_management.stubs.medicamento.TipoMedicamento tipo = 5;</code>
+   * <code>string tipo = 5;</code>
    * @return The tipo.
    */
-  com.medicamentos_management.stubs.medicamento.TipoMedicamento getTipo();
+  java.lang.String getTipo();
   /**
-   * <code>.com.medicamentos_management.stubs.medicamento.TipoMedicamento tipo = 5;</code>
+   * <code>string tipo = 5;</code>
+   * @return The bytes for tipo.
    */
-  com.medicamentos_management.stubs.medicamento.TipoMedicamentoOrBuilder getTipoOrBuilder();
+  com.google.protobuf.ByteString
+      getTipoBytes();
 }

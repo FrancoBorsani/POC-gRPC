@@ -1,6 +1,7 @@
 package dao;
 
 import domain.Medicamento;
+import domain.TipoMedicamento;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -28,4 +29,35 @@ public class MedicamentoDao {
         // If everything worked fine, return the result.
         return medicamento;
     }
+
+
+    public Medicamento guardarMedicamento(int id, String codigo, String nombreComercial, String nombreDroga, String tipo){
+
+        // We use entity managers to manage our two entities.
+        // We use the factory design pattern to get the entity manager.
+        // Here we should provide the name of the persistence unit that we provided in the persistence.xml file.
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("medicamentos-management-system");
+        EntityManager em = emf.createEntityManager();
+
+
+        Medicamento medicamento = new Medicamento(id, codigo, nombreComercial, nombreDroga, tipo);
+
+        try {
+            em.getTransaction().begin();
+            em.persist(medicamento);
+            em.getTransaction().commit();
+        } catch (Exception e) {
+
+            e.printStackTrace();
+        }finally {
+            em.close();
+        }
+
+
+        // If everything worked fine, return the result.
+        return medicamento;
+    }
+
+
+
 }

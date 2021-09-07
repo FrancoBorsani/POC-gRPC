@@ -16,6 +16,7 @@ com\medicamentos_management\stubs\tipoMedicamento\TipoMedicamentoServiceGrpc$Tip
 com\medicamentos_management\stubs\medicamento\TipoMedicamento.class
 com\medicamentos_management\stubs\tipoMedicamento\TipoMedicamentoRequestOrBuilder.class
 com\medicamentos_management\stubs\tipoMedicamento\TipoMedicamentoServiceGrpc$MethodHandlers.class
+com\medicamentos_management\stubs\medicamento\MedicamentoAltaRequest$Builder.class
 com\medicamentos_management\stubs\medicamento\MedicamentoList.class
 com\medicamentos_management\stubs\medicamento\MedicamentoServiceGrpc$MedicamentoServiceMethodDescriptorSupplier.class
 com\medicamentos_management\stubs\result\TipoMedicamento.class
@@ -26,12 +27,14 @@ service\ResultServiceImpl.class
 com\medicamentos_management\stubs\tipoMedicamento\TipoMedicamentoResponse.class
 com\medicamentos_management\stubs\tipoMedicamento\TipoMedicamentoServiceGrpc$TipoMedicamentoServiceStub.class
 domain\Result.class
+service\TipoMedicamentoServiceImpl.class
 com\medicamentos_management\stubs\result\ResultServiceGrpc$3.class
 com\medicamentos_management\stubs\medicamento\MedicamentoList$1.class
 com\medicamentos_management\stubs\result\ResultRequest$Builder.class
 com\medicamentos_management\stubs\tipoMedicamento\TipoMedicamentoServiceGrpc$TipoMedicamentoServiceBlockingStub.class
 com\medicamentos_management\stubs\result\ResultResponse$1.class
 com\medicamentos_management\stubs\result\TipoMedicamentoOrBuilder.class
+com\medicamentos_management\stubs\medicamento\MedicamentoAltaRequest.class
 com\medicamentos_management\stubs\tipoMedicamento\TipoMedicamentoServiceGrpc$TipoMedicamentoServiceMethodDescriptorSupplier.class
 com\medicamentos_management\stubs\medicamento\MedicamentoOrBuilder.class
 com\medicamentos_management\stubs\result\ResultServiceGrpc$ResultServiceBaseDescriptorSupplier.class
@@ -45,7 +48,9 @@ com\medicamentos_management\stubs\medicamento\MedicamentoRequestOrBuilder.class
 com\medicamentos_management\stubs\tipoMedicamento\TipoMedicamentoServiceGrpc$TipoMedicamentoServiceFileDescriptorSupplier.class
 com\medicamentos_management\stubs\medicamento\MedicamentoListOrBuilder.class
 com\medicamentos_management\stubs\tipoMedicamento\TipoMedicamentoServiceGrpc$1.class
+com\medicamentos_management\stubs\medicamento\MedicamentoAltaResponse$1.class
 com\medicamentos_management\stubs\result\ResultRequest$1.class
+com\medicamentos_management\stubs\medicamento\MedicamentoAltaResponse$Builder.class
 com\medicamentos_management\stubs\result\ResultServiceGrpc$ResultServiceImplBase.class
 com\medicamentos_management\stubs\medicamento\MedicamentoServiceGrpc$1.class
 com\medicamentos_management\stubs\result\TipoMedicamento$Builder.class
@@ -60,6 +65,7 @@ com\medicamentos_management\stubs\medicamento\MedicamentoServiceGrpc$Medicamento
 com\medicamentos_management\stubs\result\Result.class
 com\medicamentos_management\stubs\result\ResultServiceGrpc$ResultServiceFileDescriptorSupplier.class
 com\medicamentos_management\stubs\medicamento\TipoMedicamento$1.class
+com\medicamentos_management\stubs\medicamento\MedicamentoAltaResponse.class
 com\medicamentos_management\stubs\medicamento\MedicamentoServiceGrpc$2.class
 com\medicamentos_management\stubs\medicamento\Pagination$Builder.class
 com\medicamentos_management\stubs\medicamento\MedicamentoList$Builder.class
@@ -82,8 +88,11 @@ com\medicamentos_management\stubs\medicamento\MedicamentoResponse$Builder.class
 com\medicamentos_management\stubs\medicamento\Pagination.class
 com\medicamentos_management\stubs\medicamento\MedicamentoServiceGrpc$MedicamentoServiceBaseDescriptorSupplier.class
 com\medicamentos_management\stubs\result\ResultServiceGrpc$ResultServiceBlockingStub.class
+com\medicamentos_management\stubs\medicamento\MedicamentoAltaResponseOrBuilder.class
+com\medicamentos_management\stubs\medicamento\MedicamentoAltaRequest$1.class
 domain\Medicamento.class
 dao\TipoMedicamentoDao.class
+com\medicamentos_management\stubs\medicamento\MedicamentoAltaRequestOrBuilder.class
 com\medicamentos_management\stubs\tipoMedicamento\TipoMedicamentoResponse$1.class
 dao\ResultDao.class
 server\ResultServer.class

@@ -9,8 +9,17 @@ import com.medicamentos_management.stubs.medicamento.MedicamentoRequest;
 import com.medicamentos_management.stubs.medicamento.MedicamentoResponse;
 
 
+import com.medicamentos_management.stubs.medicamento.MedicamentoAltaRequest;
+import com.medicamentos_management.stubs.medicamento.MedicamentoAltaResponse;
+
+
+import com.medicamentos_management.stubs.tipoMedicamento.TipoMedicamentoResponse;
+import com.medicamentos_management.stubs.tipoMedicamento.TipoMedicamentoRequest;
 import dao.MedicamentoDao;
 import domain.Medicamento;
+
+import domain.TipoMedicamento;
+
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.Status;
@@ -80,4 +89,49 @@ public class MedicamentoServiceImpl extends MedicamentoServiceGrpc.MedicamentoSe
 
         return resultClient.getResults(id);
     }
+
+
+
+
+
+
+    @Override
+    public void altaMedicamento(MedicamentoAltaRequest request, StreamObserver<MedicamentoAltaResponse> responseObserver) {
+        int id = request.getId();
+        String codigo = request.getCodigo();
+        String nombreComercial = request.getNombreComercial();
+        String nombreDroga = request.getNombreDroga();
+        String tipo = request.getTipo();
+
+        try{
+            Medicamento medicamento = medicamentoDao.guardarMedicamento(id, codigo, nombreComercial, nombreDroga, tipo); // Let's find the student information from the student table
+
+            MedicamentoAltaResponse medicamentoResponse = MedicamentoAltaResponse.newBuilder()
+                    .setId(id)
+                    .setCodigo(medicamento.getCodigo())
+                    .setNombreComercial(medicamento.getNombreComercial())
+                    .setNombreDroga(medicamento.getNombreDroga())
+                    .setTipo(medicamento.getTipo())
+                    .build();
+
+            /*
+                gRPC works in an asynchronous manner, so if you have ever worked with asynchronous programming
+                you would know what will happen with following two methods.
+                with the onNext method we send the response, once the response is sent we use onCompleted()
+            */
+            responseObserver.onNext(medicamentoResponse);
+            responseObserver.onCompleted();
+        }catch (NoSuchElementException e){
+            logger.log(Level.SEVERE, "NO MEDICAMENTO FOUND WITH THE MEDICAMENTO ID :- "+id);
+
+            // If some error occurs we sent an error with the following status which is not_found
+            responseObserver.onError(Status.NOT_FOUND.asRuntimeException());
+        }
+    }
+
+
+
+
+
+
 }

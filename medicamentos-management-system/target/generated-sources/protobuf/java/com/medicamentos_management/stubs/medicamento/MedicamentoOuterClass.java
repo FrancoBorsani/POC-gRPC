@@ -35,10 +35,20 @@ public final class MedicamentoOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_medicamentos_management_stubs_medicamento_MedicamentoRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_medicamentos_management_stubs_medicamento_MedicamentoAltaRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_medicamentos_management_stubs_medicamento_MedicamentoAltaRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_medicamentos_management_stubs_medicamento_MedicamentoResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_medicamentos_management_stubs_medicamento_MedicamentoResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_medicamentos_management_stubs_medicamento_MedicamentoAltaResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_medicamentos_management_stubs_medicamento_MedicamentoAltaResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_medicamentos_management_stubs_medicamento_Pagination_descriptor;
   static final 
@@ -66,38 +76,41 @@ public final class MedicamentoOuterClass {
       ".medicamentos_management.stubs.medicamen" +
       "to.Medicamento\0220\n\013resultCount\030\002 \001(\0132\033.go" +
       "ogle.protobuf.Int32Value\"-\n\017TipoMedicame" +
-      "nto\022\n\n\002id\030\001 \001(\005\022\016\n\006nombre\030\002 \001(\t\"\245\001\n\013Medi" +
-      "camento\022\n\n\002id\030\001 \001(\005\022\016\n\006codigo\030\002 \001(\t\022\027\n\017n" +
-      "ombreComercial\030\003 \001(\t\022\023\n\013nombreDroga\030\004 \001(" +
-      "\t\022L\n\004tipo\030\005 \001(\0132>.com.medicamentos_manag" +
-      "ement.stubs.medicamento.TipoMedicamento\"" +
-      " \n\022MedicamentoRequest\022\n\n\002id\030\001 \001(\005\"\255\001\n\023Me" +
-      "dicamentoResponse\022\n\n\002id\030\001 \001(\005\022\016\n\006codigo\030" +
-      "\002 \001(\t\022\027\n\017nombreComercial\030\003 \001(\t\022\023\n\013nombre" +
-      "Droga\030\004 \001(\t\022L\n\004tipo\030\005 \001(\0132>.com.medicame" +
-      "ntos_management.stubs.medicamento.TipoMe" +
-      "dicamento\"s\n\nPagination\022\014\n\004page\030\001 \001(\005\022\020\n" +
-      "\010pageSize\030\002 \001(\005\022E\n\006search\030\003 \001(\01325.com.me" +
+      "nto\022\n\n\002id\030\001 \001(\005\022\016\n\006nombre\030\002 \001(\t\"e\n\013Medic" +
+      "amento\022\n\n\002id\030\001 \001(\005\022\016\n\006codigo\030\002 \001(\t\022\027\n\017no" +
+      "mbreComercial\030\003 \001(\t\022\023\n\013nombreDroga\030\004 \001(\t" +
+      "\022\014\n\004tipo\030\005 \001(\t\" \n\022MedicamentoRequest\022\n\n\002" +
+      "id\030\001 \001(\005\"p\n\026MedicamentoAltaRequest\022\n\n\002id" +
+      "\030\001 \001(\005\022\016\n\006codigo\030\002 \001(\t\022\027\n\017nombreComercia" +
+      "l\030\003 \001(\t\022\023\n\013nombreDroga\030\004 \001(\t\022\014\n\004tipo\030\005 \001" +
+      "(\t\"m\n\023MedicamentoResponse\022\n\n\002id\030\001 \001(\005\022\016\n" +
+      "\006codigo\030\002 \001(\t\022\027\n\017nombreComercial\030\003 \001(\t\022\023" +
+      "\n\013nombreDroga\030\004 \001(\t\022\014\n\004tipo\030\005 \001(\t\"q\n\027Med" +
+      "icamentoAltaResponse\022\n\n\002id\030\001 \001(\005\022\016\n\006codi" +
+      "go\030\002 \001(\t\022\027\n\017nombreComercial\030\003 \001(\t\022\023\n\013nom" +
+      "breDroga\030\004 \001(\t\022\014\n\004tipo\030\005 \001(\t\"s\n\nPaginati" +
+      "on\022\014\n\004page\030\001 \001(\005\022\020\n\010pageSize\030\002 \001(\005\022E\n\006se" +
+      "arch\030\003 \001(\01325.com.medicamentos_management" +
+      ".stubs.medicamento.Search\"B\n\006Search\022$\n\006f" +
+      "ilter\030\001 \001(\0132\024.google.protobuf.Any\022\022\n\njso" +
+      "nFilter\030\002 \001(\t2\226\005\n\022MedicamentoService\022\242\001\n" +
+      "\017altaMedicamento\022E.com.medicamentos_mana" +
+      "gement.stubs.medicamento.MedicamentoAlta" +
+      "Request\032F.com.medicamentos_management.st" +
+      "ubs.medicamento.MedicamentoAltaResponse\"" +
+      "\000\022\230\001\n\031listarMedicamentosAerosol\0229.com.me" +
       "dicamentos_management.stubs.medicamento." +
-      "Search\"B\n\006Search\022$\n\006filter\030\001 \001(\0132\024.googl" +
-      "e.protobuf.Any\022\022\n\njsonFilter\030\002 \001(\t2\377\004\n\022M" +
-      "edicamentoService\022\213\001\n\017altaMedicamento\022:." +
-      "com.medicamentos_management.stubs.medica" +
-      "mento.Medicamento\032:.com.medicamentos_man" +
-      "agement.stubs.medicamento.Medicamento\"\000\022" +
-      "\230\001\n\031listarMedicamentosAerosol\0229.com.medi" +
-      "camentos_management.stubs.medicamento.Pa" +
-      "gination\032>.com.medicamentos_management.s" +
-      "tubs.medicamento.MedicamentoList\"\000\022\241\001\n\"l" +
-      "istarMedicamentosNombreComercialA\0229.com." +
-      "medicamentos_management.stubs.medicament" +
-      "o.Pagination\032>.com.medicamentos_manageme" +
-      "nt.stubs.medicamento.MedicamentoList\"\000\022\233" +
-      "\001\n\022getMedicamentoInfo\022A.com.medicamentos" +
-      "_management.stubs.medicamento.Medicament" +
-      "oRequest\032B.com.medicamentos_management.s" +
-      "tubs.medicamento.MedicamentoResponseB\002P\001" +
-      "b\006proto3"
+      "Pagination\032>.com.medicamentos_management" +
+      ".stubs.medicamento.MedicamentoList\"\000\022\241\001\n" +
+      "\"listarMedicamentosNombreComercialA\0229.co" +
+      "m.medicamentos_management.stubs.medicame" +
+      "nto.Pagination\032>.com.medicamentos_manage" +
+      "ment.stubs.medicamento.MedicamentoList\"\000" +
+      "\022\233\001\n\022getMedicamentoInfo\022A.com.medicament" +
+      "os_management.stubs.medicamento.Medicame" +
+      "ntoRequest\032B.com.medicamentos_management" +
+      ".stubs.medicamento.MedicamentoResponseB\002" +
+      "P\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -130,20 +143,32 @@ public final class MedicamentoOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_medicamentos_management_stubs_medicamento_MedicamentoRequest_descriptor,
         new java.lang.String[] { "Id", });
-    internal_static_com_medicamentos_management_stubs_medicamento_MedicamentoResponse_descriptor =
+    internal_static_com_medicamentos_management_stubs_medicamento_MedicamentoAltaRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
+    internal_static_com_medicamentos_management_stubs_medicamento_MedicamentoAltaRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_medicamentos_management_stubs_medicamento_MedicamentoAltaRequest_descriptor,
+        new java.lang.String[] { "Id", "Codigo", "NombreComercial", "NombreDroga", "Tipo", });
+    internal_static_com_medicamentos_management_stubs_medicamento_MedicamentoResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
     internal_static_com_medicamentos_management_stubs_medicamento_MedicamentoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_medicamentos_management_stubs_medicamento_MedicamentoResponse_descriptor,
         new java.lang.String[] { "Id", "Codigo", "NombreComercial", "NombreDroga", "Tipo", });
+    internal_static_com_medicamentos_management_stubs_medicamento_MedicamentoAltaResponse_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_com_medicamentos_management_stubs_medicamento_MedicamentoAltaResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_medicamentos_management_stubs_medicamento_MedicamentoAltaResponse_descriptor,
+        new java.lang.String[] { "Id", "Codigo", "NombreComercial", "NombreDroga", "Tipo", });
     internal_static_com_medicamentos_management_stubs_medicamento_Pagination_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_com_medicamentos_management_stubs_medicamento_Pagination_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_medicamentos_management_stubs_medicamento_Pagination_descriptor,
         new java.lang.String[] { "Page", "PageSize", "Search", });
     internal_static_com_medicamentos_management_stubs_medicamento_Search_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_com_medicamentos_management_stubs_medicamento_Search_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_medicamentos_management_stubs_medicamento_Search_descriptor,

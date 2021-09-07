@@ -19,6 +19,7 @@ private static final long serialVersionUID = 0L;
     codigo_ = "";
     nombreComercial_ = "";
     nombreDroga_ = "";
+    tipo_ = "";
   }
 
   @java.lang.Override
@@ -75,16 +76,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 42: {
-            com.medicamentos_management.stubs.medicamento.TipoMedicamento.Builder subBuilder = null;
-            if (tipo_ != null) {
-              subBuilder = tipo_.toBuilder();
-            }
-            tipo_ = input.readMessage(com.medicamentos_management.stubs.medicamento.TipoMedicamento.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(tipo_);
-              tipo_ = subBuilder.buildPartial();
-            }
+            java.lang.String s = input.readStringRequireUtf8();
 
+            tipo_ = s;
             break;
           }
           default: {
@@ -245,29 +239,41 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TIPO_FIELD_NUMBER = 5;
-  private com.medicamentos_management.stubs.medicamento.TipoMedicamento tipo_;
+  private volatile java.lang.Object tipo_;
   /**
-   * <code>.com.medicamentos_management.stubs.medicamento.TipoMedicamento tipo = 5;</code>
-   * @return Whether the tipo field is set.
-   */
-  @java.lang.Override
-  public boolean hasTipo() {
-    return tipo_ != null;
-  }
-  /**
-   * <code>.com.medicamentos_management.stubs.medicamento.TipoMedicamento tipo = 5;</code>
+   * <code>string tipo = 5;</code>
    * @return The tipo.
    */
   @java.lang.Override
-  public com.medicamentos_management.stubs.medicamento.TipoMedicamento getTipo() {
-    return tipo_ == null ? com.medicamentos_management.stubs.medicamento.TipoMedicamento.getDefaultInstance() : tipo_;
+  public java.lang.String getTipo() {
+    java.lang.Object ref = tipo_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      tipo_ = s;
+      return s;
+    }
   }
   /**
-   * <code>.com.medicamentos_management.stubs.medicamento.TipoMedicamento tipo = 5;</code>
+   * <code>string tipo = 5;</code>
+   * @return The bytes for tipo.
    */
   @java.lang.Override
-  public com.medicamentos_management.stubs.medicamento.TipoMedicamentoOrBuilder getTipoOrBuilder() {
-    return getTipo();
+  public com.google.protobuf.ByteString
+      getTipoBytes() {
+    java.lang.Object ref = tipo_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      tipo_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -296,8 +302,8 @@ private static final long serialVersionUID = 0L;
     if (!getNombreDrogaBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, nombreDroga_);
     }
-    if (tipo_ != null) {
-      output.writeMessage(5, getTipo());
+    if (!getTipoBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, tipo_);
     }
     unknownFields.writeTo(output);
   }
@@ -321,9 +327,8 @@ private static final long serialVersionUID = 0L;
     if (!getNombreDrogaBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, nombreDroga_);
     }
-    if (tipo_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getTipo());
+    if (!getTipoBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, tipo_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -348,11 +353,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getNombreComercial())) return false;
     if (!getNombreDroga()
         .equals(other.getNombreDroga())) return false;
-    if (hasTipo() != other.hasTipo()) return false;
-    if (hasTipo()) {
-      if (!getTipo()
-          .equals(other.getTipo())) return false;
-    }
+    if (!getTipo()
+        .equals(other.getTipo())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -372,10 +374,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getNombreComercial().hashCode();
     hash = (37 * hash) + NOMBREDROGA_FIELD_NUMBER;
     hash = (53 * hash) + getNombreDroga().hashCode();
-    if (hasTipo()) {
-      hash = (37 * hash) + TIPO_FIELD_NUMBER;
-      hash = (53 * hash) + getTipo().hashCode();
-    }
+    hash = (37 * hash) + TIPO_FIELD_NUMBER;
+    hash = (53 * hash) + getTipo().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -517,12 +517,8 @@ private static final long serialVersionUID = 0L;
 
       nombreDroga_ = "";
 
-      if (tipoBuilder_ == null) {
-        tipo_ = null;
-      } else {
-        tipo_ = null;
-        tipoBuilder_ = null;
-      }
+      tipo_ = "";
+
       return this;
     }
 
@@ -553,11 +549,7 @@ private static final long serialVersionUID = 0L;
       result.codigo_ = codigo_;
       result.nombreComercial_ = nombreComercial_;
       result.nombreDroga_ = nombreDroga_;
-      if (tipoBuilder_ == null) {
-        result.tipo_ = tipo_;
-      } else {
-        result.tipo_ = tipoBuilder_.build();
-      }
+      result.tipo_ = tipo_;
       onBuilt();
       return result;
     }
@@ -621,8 +613,9 @@ private static final long serialVersionUID = 0L;
         nombreDroga_ = other.nombreDroga_;
         onChanged();
       }
-      if (other.hasTipo()) {
-        mergeTipo(other.getTipo());
+      if (!other.getTipo().isEmpty()) {
+        tipo_ = other.tipo_;
+        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -912,123 +905,80 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.medicamentos_management.stubs.medicamento.TipoMedicamento tipo_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.medicamentos_management.stubs.medicamento.TipoMedicamento, com.medicamentos_management.stubs.medicamento.TipoMedicamento.Builder, com.medicamentos_management.stubs.medicamento.TipoMedicamentoOrBuilder> tipoBuilder_;
+    private java.lang.Object tipo_ = "";
     /**
-     * <code>.com.medicamentos_management.stubs.medicamento.TipoMedicamento tipo = 5;</code>
-     * @return Whether the tipo field is set.
-     */
-    public boolean hasTipo() {
-      return tipoBuilder_ != null || tipo_ != null;
-    }
-    /**
-     * <code>.com.medicamentos_management.stubs.medicamento.TipoMedicamento tipo = 5;</code>
+     * <code>string tipo = 5;</code>
      * @return The tipo.
      */
-    public com.medicamentos_management.stubs.medicamento.TipoMedicamento getTipo() {
-      if (tipoBuilder_ == null) {
-        return tipo_ == null ? com.medicamentos_management.stubs.medicamento.TipoMedicamento.getDefaultInstance() : tipo_;
+    public java.lang.String getTipo() {
+      java.lang.Object ref = tipo_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tipo_ = s;
+        return s;
       } else {
-        return tipoBuilder_.getMessage();
+        return (java.lang.String) ref;
       }
     }
     /**
-     * <code>.com.medicamentos_management.stubs.medicamento.TipoMedicamento tipo = 5;</code>
+     * <code>string tipo = 5;</code>
+     * @return The bytes for tipo.
      */
-    public Builder setTipo(com.medicamentos_management.stubs.medicamento.TipoMedicamento value) {
-      if (tipoBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        tipo_ = value;
-        onChanged();
+    public com.google.protobuf.ByteString
+        getTipoBytes() {
+      java.lang.Object ref = tipo_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tipo_ = b;
+        return b;
       } else {
-        tipoBuilder_.setMessage(value);
+        return (com.google.protobuf.ByteString) ref;
       }
-
-      return this;
     }
     /**
-     * <code>.com.medicamentos_management.stubs.medicamento.TipoMedicamento tipo = 5;</code>
+     * <code>string tipo = 5;</code>
+     * @param value The tipo to set.
+     * @return This builder for chaining.
      */
     public Builder setTipo(
-        com.medicamentos_management.stubs.medicamento.TipoMedicamento.Builder builderForValue) {
-      if (tipoBuilder_ == null) {
-        tipo_ = builderForValue.build();
-        onChanged();
-      } else {
-        tipoBuilder_.setMessage(builderForValue.build());
-      }
-
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      tipo_ = value;
+      onChanged();
       return this;
     }
     /**
-     * <code>.com.medicamentos_management.stubs.medicamento.TipoMedicamento tipo = 5;</code>
-     */
-    public Builder mergeTipo(com.medicamentos_management.stubs.medicamento.TipoMedicamento value) {
-      if (tipoBuilder_ == null) {
-        if (tipo_ != null) {
-          tipo_ =
-            com.medicamentos_management.stubs.medicamento.TipoMedicamento.newBuilder(tipo_).mergeFrom(value).buildPartial();
-        } else {
-          tipo_ = value;
-        }
-        onChanged();
-      } else {
-        tipoBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <code>.com.medicamentos_management.stubs.medicamento.TipoMedicamento tipo = 5;</code>
+     * <code>string tipo = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearTipo() {
-      if (tipoBuilder_ == null) {
-        tipo_ = null;
-        onChanged();
-      } else {
-        tipo_ = null;
-        tipoBuilder_ = null;
-      }
-
+      
+      tipo_ = getDefaultInstance().getTipo();
+      onChanged();
       return this;
     }
     /**
-     * <code>.com.medicamentos_management.stubs.medicamento.TipoMedicamento tipo = 5;</code>
+     * <code>string tipo = 5;</code>
+     * @param value The bytes for tipo to set.
+     * @return This builder for chaining.
      */
-    public com.medicamentos_management.stubs.medicamento.TipoMedicamento.Builder getTipoBuilder() {
+    public Builder setTipoBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       
+      tipo_ = value;
       onChanged();
-      return getTipoFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.com.medicamentos_management.stubs.medicamento.TipoMedicamento tipo = 5;</code>
-     */
-    public com.medicamentos_management.stubs.medicamento.TipoMedicamentoOrBuilder getTipoOrBuilder() {
-      if (tipoBuilder_ != null) {
-        return tipoBuilder_.getMessageOrBuilder();
-      } else {
-        return tipo_ == null ?
-            com.medicamentos_management.stubs.medicamento.TipoMedicamento.getDefaultInstance() : tipo_;
-      }
-    }
-    /**
-     * <code>.com.medicamentos_management.stubs.medicamento.TipoMedicamento tipo = 5;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.medicamentos_management.stubs.medicamento.TipoMedicamento, com.medicamentos_management.stubs.medicamento.TipoMedicamento.Builder, com.medicamentos_management.stubs.medicamento.TipoMedicamentoOrBuilder> 
-        getTipoFieldBuilder() {
-      if (tipoBuilder_ == null) {
-        tipoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.medicamentos_management.stubs.medicamento.TipoMedicamento, com.medicamentos_management.stubs.medicamento.TipoMedicamento.Builder, com.medicamentos_management.stubs.medicamento.TipoMedicamentoOrBuilder>(
-                getTipo(),
-                getParentForChildren(),
-                isClean());
-        tipo_ = null;
-      }
-      return tipoBuilder_;
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

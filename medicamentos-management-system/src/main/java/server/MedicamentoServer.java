@@ -3,6 +3,7 @@ package server;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import service.MedicamentoServiceImpl;
+import service.TipoMedicamentoServiceImpl;
 
 import java.io.IOException;
 import java.util.logging.Level;
@@ -16,6 +17,7 @@ public class MedicamentoServer {
     public static void main(String[] args) {
         Server server = ServerBuilder.forPort(9091)
                 .addService(new  MedicamentoServiceImpl())
+                .addService(new TipoMedicamentoServiceImpl())
                 .build();
 
         try {

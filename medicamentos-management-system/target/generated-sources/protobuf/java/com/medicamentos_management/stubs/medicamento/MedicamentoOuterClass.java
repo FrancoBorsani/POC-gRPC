@@ -49,16 +49,6 @@ public final class MedicamentoOuterClass {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_medicamentos_management_stubs_medicamento_Search_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_medicamentos_management_stubs_medicamento_TipoMedicamentoRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_medicamentos_management_stubs_medicamento_TipoMedicamentoRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_medicamentos_management_stubs_medicamento_TipoMedicamentoResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_medicamentos_management_stubs_medicamento_TipoMedicamentoResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -90,37 +80,24 @@ public final class MedicamentoOuterClass {
       "\010pageSize\030\002 \001(\005\022E\n\006search\030\003 \001(\01325.com.me" +
       "dicamentos_management.stubs.medicamento." +
       "Search\"B\n\006Search\022$\n\006filter\030\001 \001(\0132\024.googl" +
-      "e.protobuf.Any\022\022\n\njsonFilter\030\002 \001(\t\"$\n\026Ti" +
-      "poMedicamentoRequest\022\n\n\002id\030\001 \001(\005\"5\n\027Tipo" +
-      "MedicamentoResponse\022\n\n\002id\030\001 \001(\005\022\016\n\006nombr" +
-      "e\030\002 \001(\t2\252\003\n\026TipoMedicamentoService\022\227\001\n\023a" +
-      "ltaTipoMedicamento\022>.com.medicamentos_ma" +
-      "nagement.stubs.medicamento.TipoMedicamen" +
-      "to\032>.com.medicamentos_management.stubs.m" +
-      "edicamento.TipoMedicamento\"\000\022L\n\023bajaTipo" +
-      "Medicamento\022\033.google.protobuf.Int32Value" +
-      "\032\026.google.protobuf.Empty\"\000\022\247\001\n\026getTipoMe" +
-      "dicamentoInfo\022E.com.medicamentos_managem" +
-      "ent.stubs.medicamento.TipoMedicamentoReq" +
-      "uest\032F.com.medicamentos_management.stubs" +
-      ".medicamento.TipoMedicamentoResponse2\377\004\n" +
-      "\022MedicamentoService\022\213\001\n\017altaMedicamento\022" +
-      ":.com.medicamentos_management.stubs.medi" +
-      "camento.Medicamento\032:.com.medicamentos_m" +
-      "anagement.stubs.medicamento.Medicamento\"" +
-      "\000\022\230\001\n\031listarMedicamentosAerosol\0229.com.me" +
-      "dicamentos_management.stubs.medicamento." +
-      "Pagination\032>.com.medicamentos_management" +
-      ".stubs.medicamento.MedicamentoList\"\000\022\241\001\n" +
-      "\"listarMedicamentosNombreComercialA\0229.co" +
-      "m.medicamentos_management.stubs.medicame" +
-      "nto.Pagination\032>.com.medicamentos_manage" +
-      "ment.stubs.medicamento.MedicamentoList\"\000" +
-      "\022\233\001\n\022getMedicamentoInfo\022A.com.medicament" +
-      "os_management.stubs.medicamento.Medicame" +
-      "ntoRequest\032B.com.medicamentos_management" +
-      ".stubs.medicamento.MedicamentoResponseB\002" +
-      "P\001b\006proto3"
+      "e.protobuf.Any\022\022\n\njsonFilter\030\002 \001(\t2\377\004\n\022M" +
+      "edicamentoService\022\213\001\n\017altaMedicamento\022:." +
+      "com.medicamentos_management.stubs.medica" +
+      "mento.Medicamento\032:.com.medicamentos_man" +
+      "agement.stubs.medicamento.Medicamento\"\000\022" +
+      "\230\001\n\031listarMedicamentosAerosol\0229.com.medi" +
+      "camentos_management.stubs.medicamento.Pa" +
+      "gination\032>.com.medicamentos_management.s" +
+      "tubs.medicamento.MedicamentoList\"\000\022\241\001\n\"l" +
+      "istarMedicamentosNombreComercialA\0229.com." +
+      "medicamentos_management.stubs.medicament" +
+      "o.Pagination\032>.com.medicamentos_manageme" +
+      "nt.stubs.medicamento.MedicamentoList\"\000\022\233" +
+      "\001\n\022getMedicamentoInfo\022A.com.medicamentos" +
+      "_management.stubs.medicamento.Medicament" +
+      "oRequest\032B.com.medicamentos_management.s" +
+      "tubs.medicamento.MedicamentoResponseB\002P\001" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -171,18 +148,6 @@ public final class MedicamentoOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_medicamentos_management_stubs_medicamento_Search_descriptor,
         new java.lang.String[] { "Filter", "JsonFilter", });
-    internal_static_com_medicamentos_management_stubs_medicamento_TipoMedicamentoRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_com_medicamentos_management_stubs_medicamento_TipoMedicamentoRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_medicamentos_management_stubs_medicamento_TipoMedicamentoRequest_descriptor,
-        new java.lang.String[] { "Id", });
-    internal_static_com_medicamentos_management_stubs_medicamento_TipoMedicamentoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_com_medicamentos_management_stubs_medicamento_TipoMedicamentoResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_medicamentos_management_stubs_medicamento_TipoMedicamentoResponse_descriptor,
-        new java.lang.String[] { "Id", "Nombre", });
     com.google.protobuf.EmptyProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.protobuf.AnyProto.getDescriptor();

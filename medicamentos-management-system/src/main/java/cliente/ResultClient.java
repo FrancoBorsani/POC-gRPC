@@ -3,6 +3,7 @@ package client;
 import com.medicamentos_management.stubs.result.ResultRequest;
 import com.medicamentos_management.stubs.result.ResultResponse;
 import com.medicamentos_management.stubs.result.ResultServiceGrpc;
+import com.medicamentos_management.stubs.result.TipoMedicamento;
 import io.grpc.Channel;
 
 import java.util.ArrayList;
@@ -35,4 +36,21 @@ public class ResultClient {
 
         return results;
     }
+
+
+    // This method will create a request for you and get the response back from the result service and sent it to you
+    public List<String> getResultsAltaMedicamento(int id){
+        // Creating the request object
+        ResultRequest resultRequest = ResultRequest.newBuilder().setId(id).build();
+        // Getting the response back
+        TipoMedicamento resultResponse = resultServiceBlockingStub.getResultForTipoMedicamento(resultRequest);
+
+        // Send it to the caller, in an appropriate manner in this case as a list.
+        List<String> results = new ArrayList<>();
+
+        return results;
+    }
+
+
+
 }
